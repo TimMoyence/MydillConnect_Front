@@ -1,0 +1,20 @@
+.background {
+  background-image: url("/assets/image/404.webp");
+  background-size: cover;
+
+  /* L'image de fond ne se répétera pas */
+  background-repeat: no-repeat;
+
+  /* Positionnez l'image de fond au centre de l'élément */
+  background-position: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.positioned {
+  top: 90%;
+  left: 45%;
+}

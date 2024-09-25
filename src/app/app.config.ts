@@ -1,9 +1,37 @@
-import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
-
+import {
+  HTTP_INTERCEPTORS,
+  HttpClientModule,
+  provideHttpClient,
+  withFetch,
+} from '@angular/common/http';
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
+import {
+  InMemoryScrollingFeature,
+  InMemoryScrollingOptions,
+  provideRouter,
+  withInMemoryScrolling,
+} from '@angular/router';
 import { routes } from './app.routes';
-import { provideClientHydration } from '@angular/platform-browser';
+import { HttpErrorInterceptor } from './shared/services/http-error.interceptor';
+
+const scrollConfig: InMemoryScrollingOptions = {
+  scrollPositionRestoration: 'top',
+  anchorScrolling: 'enabled',
+};
+
+const inMemoryScrollingFeature: InMemoryScrollingFeature =
+  withInMemoryScrolling(scrollConfig);
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration()]
+  providers: [
+    importProvidersFrom(HttpClientModule, BrowserModule),
+    provideHttpClient(withFetch()),
+    provideRouter(routes, inMemoryScrollingFeature),
+    { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
+    provideClientHydration(),
+  ],
 };

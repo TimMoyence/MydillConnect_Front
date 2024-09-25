@@ -1,0 +1,37 @@
+.container {
+  margin-bottom: 2rem !important;
+}
+
+.louison-img {
+  object-fit: cover;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease-in-out;
+}
+
+img {
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+.carrousel-bg-color-arrow {
+  background-color: rgba(239, 234, 228, 0.9) !important;
+}
+.carouselBg {
+  background-color: rgba(239, 234, 228, 0.2) !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover > p {
+  object-fit: cover;
+  color: green !important;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 412px) {
+  h1 {
+    font-size: 1rem !important;
+  }
+}

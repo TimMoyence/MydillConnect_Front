@@ -1,0 +1,52 @@
+.top {
+  margin-top: 119px !important;
+}
+
+nav {
+  background-color: rgba(119, 185, 122, 0.5) !important;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(25, 135, 131, 0.8) !important;
+}
+
+@media (max-width: 991px) {
+  #offcanvasNavbar {
+    width: 25%;
+    background-color: rgba(119, 185, 122, 0.8) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .little-texte {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 485px) {
+  .little-texte {
+    font-size: 0.7em;
+    max-width: 180px;
+  }
+
+  #offcanvasNavbar {
+    width: 35%;
+  }
+}
+
+@media (max-width: 385px) {
+  .little-texte {
+    font-size: 0.6em;
+    max-width: 140px;
+  }
+
+  #offcanvasNavbar {
+    width: 45%;
+  }
+}
+
+@media (max-width: 349px) {
+  .little-texte {
+    display: none;
+  }
+}

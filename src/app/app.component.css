@@ -1,0 +1,63 @@
+body {
+  background-image: url("/assets/image/fond.webp"); /* Remplacez 'chemin-vers-votre-image.jpg' par le chemin réel de votre image de fond */
+  background-size: cover; /* Assure que l'image de fond couvre tout l'espace disponible, en conservant ses proportions */
+  background-position: center; /* Centre l'image de fond */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
+  background-attachment: fixed; /* Optionnel: fixe l'image de fond lors du défilement */
+}
+
+p {
+  text-align: justify;
+}
+
+.green {
+  background-color: rgba(119, 186, 168, 0.899) !important;
+}
+
+.green-light,
+button.green:hover,
+.btn-success:hover {
+  background-color: rgba(25, 135, 84, 0.5) !important;
+}
+
+.rounded-img {
+  border-radius: 50%;
+}
+
+.bgColor {
+  background-color: rgba(239, 234, 228, 0.5) !important;
+}
+
+nav,
+.btn-success,
+.green-light-transparent,
+.navbar {
+  background-color: rgba(119, 185, 122, 0.5) !important;
+}
+
+.icone-text {
+  margin-left: 35px;
+}
+.icone {
+  width: 40px !important;
+  height: auto;
+}
+
+.icone-container > div {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.italiCard {
+  font-style: italic;
+}
+
+@media (max-width: 720px) {
+  .icone-container {
+    flex-wrap: wrap;
+  }
+
+  .icone-container > div {
+    justify-content: start !important;
+  }
+}

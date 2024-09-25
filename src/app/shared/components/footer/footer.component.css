@@ -1,0 +1,80 @@
+.logo-social-media {
+  margin: 0.5rem !important;
+  max-height: 4rem;
+  width: auto;
+}
+
+.logo-social-media-email {
+  padding: 0.3rem !important;
+  margin: 0.5rem !important;
+  max-height: 3rem;
+  width: auto;
+}
+
+h3 {
+  & > em,
+  & > strong {
+    padding: 0 1em;
+    position: relative;
+    display: block;
+
+    &:before,
+    &:after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 15%;
+      max-width: 7em;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 50%;
+      position: relative;
+      top: -0.05em;
+    }
+
+    & > strong,
+    & > em {
+      font-style: normal;
+      text-transform: none;
+      letter-spacing: 0;
+      max-width: 70%;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0 0.2em 0;
+    }
+  }
+}
+
+a {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+nav {
+  background-color: rgba(119, 185, 122, 0.5) !important;
+}
+
+@media (max-width: 756px) {
+  .btn {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media (max-width: 412px) {
+  .logo-social-media {
+    max-height: 3rem;
+    width: auto;
+    margin: 0.3rem !important;
+  }
+
+  .logo-social-media-email {
+    padding: 1rem !important;
+    max-height: 2rem;
+    width: auto;
+    margin: 0.3rem !important;
+  }
+
+  .btn {
+    margin-bottom: 1rem !important;
+  }
+}
