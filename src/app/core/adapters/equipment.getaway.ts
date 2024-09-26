@@ -24,4 +24,11 @@ export class EquipmentService implements EquipmentGetaway {
         tap());
   }
 
+  getById(equipmentId: string): Observable<Equipment> {
+    return this.http
+      .get<Equipment>(`${environment.apiURL}equipment/${equipmentId}`)
+      .pipe(
+        tap());
+  }
+
  }

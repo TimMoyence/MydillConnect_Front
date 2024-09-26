@@ -3,4 +3,5 @@ import { Equipment } from '../models/equipment.models';
 
 export interface EquipmentGetaway {
   getByCategory(categoryName: string): Observable<Equipment[]>;
+  getById(equipmentId: string): Observable<Equipment>;
 }

@@ -7,16 +7,32 @@
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">{{ item.name }}</h5>
           <p class="card-text">{{ item.description }}</p>
+          
+          <!-- Display the item state -->
           <p class="card-text">
-            <small class="text-muted">Availability: {{ item.availability ? 'Available' : 'Unavailable' }}</small>
+            <small class="text-muted">Etat: {{ item.state }}</small>
           </p>
+
+          <!-- Display the item availability -->
+          <p class="card-text">
+            <small class="text-muted">Availability: {{ item.status === 'reserved' ? 'reserved' : 'disponible' }}</small>
+          </p>
+
+          <!-- Show next available date if the item is reserved -->
+          <ng-container *ngIf="item.status === 'reserved'">
+            <p>
+              <small class="text-muted">Prochaine disponibilité: {{ item.return_date | date:'medium' }}</small>
+            </p>
+          </ng-container>
+
+          <!-- Reservation Button Logic -->
           <a 
-            [class.disabled]="!item.availability"
-            [attr.aria-disabled]="!item.availability ? true : null"
-            [href]="item.availability ? '/reservation/' + item.name : '#'"
+            [class.disabled]="item.status === 'reserved'"
+            [attr.aria-disabled]="item.status === 'reserved'"
+            [href]="item.status !== 'reserved' ? '/reservation/' + item.equipment_id : '#'"
             class="btn btn-success mt-auto"
-            [ngClass]="{'disabled': !item.availability}"
-            [attr.disabled]="!item.availability ? true : null"
+            [ngClass]="{'disabled': item.status === 'reserved'}"
+            [attr.disabled]="item.status === 'reserved'"
           >
             Reserver
           </a>

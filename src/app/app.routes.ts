@@ -64,8 +64,12 @@ export const routes: Routes = [
     data: { category: 'Batteries portables - Chargeurs' }
   },
   {
-    path: 'reservation/:name',
+    path: 'reservation/:id',
     loadComponent: () => import('./views/make-reservation/make-reservation.component'),
+  },
+  {
+    path: 'reservations-done',
+    loadComponent: () => import('./views/reservation-done/reservation-done.component'),
   },
   {
     path: 'mentions-legales',
