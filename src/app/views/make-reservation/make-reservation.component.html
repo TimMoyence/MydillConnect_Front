@@ -22,15 +22,39 @@
       </div>
 
       <!-- Date Picker for Reservation Date -->
-      <div class="form-group">
-        <label for="reservationDate">Reservation Date:</label>
-        <input
-          type="text"
-          id="reservationDate"
-          class="form-control"
-          placeholder="Select reservation date"
-          [(ngModel)]="reservationDate"
-        />
+      <div class="row">
+        <div class="col-md-6 col-12 mb-2">
+          <label for="inputStartDate" class="form-label">Start Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="inputStartDate"
+            [(ngModel)]="reservationStartDate"
+            name="startDate"
+            [min]="today"
+            required
+          />
+        </div>
+        <!-- Start date needs to be superior to the date of today -->
+        <div class="col-md-6 col-12 mb-2">
+          <label for="inputEndDate" class="form-label">End Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="inputEndDate"
+            [(ngModel)]="reservationEndDate"
+            name="endDate"
+            [min]="reservationStartDate"
+            required
+          />
+        </div>
+      </div>
+
+      <!-- Error Message -->
+      <div *ngIf="dateValidationError" class="d-flex justify-content-center">
+        <small class="text-danger">
+          The end date must be greater than or equal to the start date.
+        </small>
       </div>
 
       <button class="btn btn-primary btn-block mt-3" (click)="makeReservation()">Reserve</button>

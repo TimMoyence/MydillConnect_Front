@@ -1,8 +1,7 @@
 import { NgIf } from '@angular/common';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import * as $ from 'jquery'; // Import jQuery for datepicker
 import { CookieService } from 'ngx-cookie-service';
 import { ReservationService } from '../../core/adapters/reservation.getaway';
 
@@ -13,12 +12,15 @@ import { ReservationService } from '../../core/adapters/reservation.getaway';
   templateUrl: './make-reservation.component.html',
   styleUrls: ['./make-reservation.component.css'],
 })
-export default class ReservationComponent implements OnInit, AfterViewInit {
+export default class ReservationComponent implements OnInit {
   equipmentId: string | null = null;
   userId: string = '';  // Retrieved from cookie
-  reservationDate: string = ''; // Date selected by user
-  equipmentState: string = '';  // State of the equipment from dropdown
+  reservationStartDate: string = '';  // Start date selected by user
+  reservationEndDate: string = '';    // End date selected by user
+  equipmentState: string = '';        // State of the equipment from dropdown
   message: string = '';
+  dateValidationError: boolean = false;
+  today: string = new Date().toISOString().split('T')[0]; // Today's date in yyyy-mm-dd format
 
   constructor(
     private route: ActivatedRoute,
@@ -30,35 +32,42 @@ export default class ReservationComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     // Retrieve equipment ID from the route parameters
     this.equipmentId = this.route.snapshot.paramMap.get('id');
-    
+
     // Retrieve the user ID from the cookie
     this.userId = this.cookieService.get('userId');
+
+    if(!this.userId || this.userId === '') {
+      this.router.navigate(['/login']);
+    }
   }
 
-  ngAfterViewInit(): void {
-  // Initialize Bootstrap datepicker after the view has initialized
-//  ($('#reservationDate') as any).datepicker({
-//    format: 'yyyy-mm-dd',
-//    autoclose: true,
-//    todayHighlight: true
-//  }).on('changeDate', (e: any) => {
-//    this.reservationDate = e.format('yyyy-mm-dd'); // Update the reservationDate model when the date is selected
-//  });
-}
-
   makeReservation(): void {
-    // Validate that both the equipment state and date are selected
-    if (!this.equipmentId || !this.equipmentState || !this.reservationDate) {
-      this.message = 'Please select the state of the equipment and reservation date.';
+    // Validate that the start and end dates are valid
+    if (!this.equipmentId || !this.equipmentState || !this.reservationStartDate || !this.reservationEndDate) {
+      this.message = 'Please complete the form with the necessary details.';
       return;
     }
 
+    if (new Date(this.reservationStartDate) > new Date(this.reservationEndDate)) {
+      this.dateValidationError = true;
+      this.message = '';
+      return;
+    } else {
+      this.dateValidationError = false;
+    }
+
     // Call the ReservationService's makeReservation method
+    const reservationData = {
+      user_id: this.userId,
+      reservation_date: this.reservationStartDate,  // Send the start date as reservation date
+      equipment_state: this.equipmentState,
+    };
+
     this.reservationService
       .makeReservation(
         this.equipmentId!, 
         this.userId, 
-        this.reservationDate, 
+        this.reservationStartDate, 
         this.equipmentState
       )
       .subscribe(
