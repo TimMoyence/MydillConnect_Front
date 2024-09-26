@@ -10,7 +10,7 @@ import { ReservationService } from '../../core/adapters/reservation.getaway';
   styleUrls: ['./make-reservation.component.css'],
 
 })
-export class ReservationComponent implements OnInit {
+export default class ReservationComponent implements OnInit {
   equipmentId: string | null = null;
   userId: string = '1';  // Replace with actual user ID from authentication
   reservationDate: string = new Date().toISOString().split('T')[0];
