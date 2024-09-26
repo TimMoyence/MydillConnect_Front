@@ -23,77 +23,146 @@
       En savoir plus
     </button>
   </div>
-</div>
 
-<div class="container blue rounded-5 col-10 pt-2">
+<div class="container green rounded-5 col-12 pt-2">
   <div class="row col-12">
     <div class="d-flex col-4 col-md-2 mx-auto pb-2">
       <img
-        src="/assets/image/computers.webp"
-        alt=""
-        width="60%"
-        height="auto"
-        class="rounded-5 m-auto"
-      />
+          src="/assets/image/computers.webp"
+          alt="Gestion du parc informatique"
+          class="img-fluid rounded-5 mx-auto d-block"
+        />
     </div>
   </div>
   <h5 class="text-center text-white pb-2">
-    Gérez efficacement le parc informatique :
+          Gérez efficacement le parc informatique :
   </h5>
-  <div class="row col-12 col-md-10 mx-auto wrap">
-    <a type="button" class="row col-6 col-md-3 mx-auto pb-2" href="/reservation">
-      <img
-        src="/assets/image/computer-management.webp"
-        alt=""
-        class="rounded-5 m-auto img-fluid col-8"
-      />
-      <p class="text-center text-white">Ordinateurs</p>
-    </a>
-    <a type="button" class="row col-6 col-md-3 mx-auto pb-2" href="/reservation">
-      <img
-        src="/assets/image/software.webp"
-        alt=""
-        class="rounded-5 m-auto img-fluid col-8"
-      />
-      <p class="text-center text-white">Logiciels</p>
-    </a>
-    <a type="button" class="row col-6 col-md-3 mx-auto pb-2" href="/reservation">
-      <img
-        src="/assets/image/network.webp"
-        alt=""
-        class="rounded-5 m-auto img-fluid col-8"
-      />
-      <p class="text-center text-white">Réseaux</p>
-    </a>
-    <a type="button" class="row col-6 col-md-3 mx-auto pb-2" href="/reservation">
-      <img
-        src="/assets/image/tools.webp"
-        alt=""
-        class="rounded-5 m-auto img-fluid col-8"
-      />
-      <p class="text-center text-white">Outils numériques</p>
-    </a>
-  </div>
-  <h5 class="text-center text-white pb-2">
-    Ou explorez nos autres services :
-  </h5>
-  <div class="row col-12 col-md-10 mx-auto wrap">
-    <a type="button" class="row col-6 col-md-3 mx-auto pb-2" href="/reservation">
-      <img
-        src="/assets/image/support.webp"
-        alt=""
-        class="rounded-5 m-auto img-fluid col-8"
-      />
-      <p class="text-center text-white">Support technique</p>
-    </a>
-    <a type="button" class="row col-6 col-md-3 mx-auto pb-2" href="/reservation">
-      <img
-        src="/assets/image/maintenance.webp"
-        alt=""
-        class="rounded-5 m-auto img-fluid col-8"
-      />
-      <p class="text-center text-white">Maintenance</p>
-    </a>
-  </div>
-  <p class="text-center text-white pb-3">Plus de détails ci-dessous :</p>
+</div>
+
+
+    <!-- First Row of Cards -->
+    <div class="row justify-content-center g-4">
+      <!-- Ordinateurs Card -->
+      <div class="col-12">
+        <a href="/categorie/ordinateurs" class="text-decoration-none">
+          <div class="card bg-transparent border-2 rounded-5">
+            <img
+              src="/assets/image/computer-management.webp"
+              alt="Ordinateurs"
+              class="card-img-top rounded-top-5"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Ordinateurs</h5>
+              <p class="card-text">
+                Découvrez notre gamme complète d'ordinateurs adaptés à tous vos besoins professionnels et personnels.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Logiciels Card -->
+      <div class="col-12">
+        <a href="/categorie/logiciels" class="text-decoration-none">
+          <div class="card bg-transparent border-2 rounded-5">
+            <img
+              src="/assets/image/software.webp"
+              alt="Logiciels"
+              class="card-img-top rounded-top-5"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Logiciels</h5>
+              <p class="card-text">
+                Accédez à une variété de logiciels performants pour optimiser votre productivité et sécurité informatique.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Réseaux Card -->
+      <div class="col-12">
+        <a href="/categorie/reseaux" class="text-decoration-none">
+          <div class="card bg-transparent border-2 rounded-5">
+            <img
+              src="/assets/image/network.webp"
+              alt="Réseaux"
+              class="card-img-top rounded-top-5"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Réseaux</h5>
+              <p class="card-text">
+                Solutions de réseaux robustes pour assurer une connectivité fiable et sécurisée au sein de votre organisation.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Outils numériques Card -->
+      <div class="col-12">
+        <a href="/categorie/outils" class="text-decoration-none">
+          <div class="card bg-transparent border-2 rounded-5">
+            <img
+              src="/assets/image/tools.webp"
+              alt="Outils numériques"
+              class="card-img-top rounded-top-5"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Outils numériques</h5>
+              <p class="card-text">
+                Explorez nos outils numériques innovants pour améliorer vos processus et faciliter la gestion quotidienne.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Second Section Title -->
+    <h5 class="text-center text-white pt-5 pb-4">
+      Ou explorez nos autres services :
+    </h5>
+
+    <!-- Second Row of Cards -->
+    <div class="row justify-content-center g-4">
+      <!-- Support Technique Card -->
+      <div class="col-12">
+        <a href="/categorie/support" class="text-decoration-none">
+          <div class="card bg-transparent border-2 rounded-5">
+            <img
+              src="/assets/image/support.webp"
+              alt="Support technique"
+              class="card-img-top rounded-top-5"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Support technique</h5>
+              <p class="card-text">
+                Bénéficiez d'un support technique réactif et compétent pour résoudre rapidement vos problèmes informatiques.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Maintenance Card -->
+      <div class="col-12">
+        <a href="/categorie/maintenance" class="text-decoration-none">
+          <div class="card bg-transparent border-2 rounded-5">
+            <img
+              src="/assets/image/maintenance.webp"
+              alt="Maintenance"
+              class="card-img-top rounded-top-5"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Maintenance</h5>
+              <p class="card-text">
+                Assurez la pérennité de vos équipements grâce à nos services de maintenance préventive et corrective.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
 </div>

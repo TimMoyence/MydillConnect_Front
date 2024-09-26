@@ -13,6 +13,40 @@ export const routes: Routes = [
       },
     },
   },
+  { 
+    path: 'categorie/ordinateurs', 
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
+    data: { category: 'Ordinateurs portables' } 
+  },
+  { 
+    path: 'categorie/logiciels', 
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
+    data: { category: 'Projecteurs' } 
+  },
+  { 
+    path: 'categorie/reseaux', 
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
+    data: { category: 'Imprimantes' } 
+  },
+  { 
+    path: 'categorie/outils', 
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
+    data: { category: 'Imprimantes' } 
+  },
+  { 
+    path: 'categorie/support', 
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
+    data: { category: 'Imprimantes' } 
+  },
+  { 
+    path: 'categorie/maintenance', 
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
+    data: { category: 'Imprimantes' } 
+  },
+  {
+    path: 'reservation/:name',
+    loadComponent: () => import('./views/make-reservation/make-reservation.component'),
+  },
   {
     path: 'mentions-legales',
     loadComponent: () =>

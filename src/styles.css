@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.green {
+  background-color: rgba(119, 186, 168, 0.899) !important;
+}
+
+.card-img-top{
+  width: 100%;
+  height: 150px;
+}

@@ -1,0 +1,27 @@
+<div class="container">
+  <h2 class="my-4">{{ category }}</h2>
+  <div class="row">
+    <div *ngFor="let item of equipment" class="col-md-4 d-flex align-items-stretch">
+      <div class="card mb-4" style="width: 100%;">
+        <img class="card-img-top" [src]="'/assets/image/categorie/' + item.name + '.webp'" alt="{{ item.name }} image">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+          <p class="card-text">
+            <small class="text-muted">Availability: {{ item.availability ? 'Available' : 'Unavailable' }}</small>
+          </p>
+          <a 
+            [class.disabled]="!item.availability"
+            [attr.aria-disabled]="!item.availability ? true : null"
+            [href]="item.availability ? '/reservation/' + item.name : '#'"
+            class="btn btn-success mt-auto"
+            [ngClass]="{'disabled': !item.availability}"
+            [attr.disabled]="!item.availability ? true : null"
+          >
+            Reserver
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
