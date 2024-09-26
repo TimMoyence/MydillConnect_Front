@@ -1,0 +1,18 @@
+{
+  "routes": [
+    "/accueil",
+    "/admin",
+    "/admin/login",
+    "/categorie/Câbles et adaptateurs",
+    "/categorie/Chargeurs",
+    "/categorie/disquedursetusb",
+    "/categorie/imprimantes",
+    "/categorie/ordinateurs",
+    "/categorie/projecteurs",
+    "/categorie/scanner",
+    "/categorie/Serveurs",
+    "/categorie/stations",
+    "/categorie/Webcams",
+    "/mentions-legales"
+  ]
+}

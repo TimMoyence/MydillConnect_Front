@@ -1,1 +1,39 @@
-<p>make-reservation works!</p>
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h3>Reserve Equipment</h3>
+    </div>
+    <div class="card-body">
+      <p *ngIf="message" class="alert alert-info">{{ message }}</p>
+
+      <!-- Dropdown for Equipment State -->
+      <div class="form-group">
+        <label for="state">Equipment State at Reservation:</label>
+        <select
+          id="state"
+          class="form-control"
+          [(ngModel)]="equipmentState"
+        >
+          <option value="" disabled selected>Select state</option>
+          <option value="Neuf">Neuf</option>
+          <option value="Usée">Usée</option>
+          <option value="Cassée">Cassée</option>
+        </select>
+      </div>
+
+      <!-- Date Picker for Reservation Date -->
+      <div class="form-group">
+        <label for="reservationDate">Reservation Date:</label>
+        <input
+          type="text"
+          id="reservationDate"
+          class="form-control"
+          placeholder="Select reservation date"
+          [(ngModel)]="reservationDate"
+        />
+      </div>
+
+      <button class="btn btn-primary btn-block mt-3" (click)="makeReservation()">Reserve</button>
+    </div>
+  </div>
+</div>
