@@ -13,55 +13,55 @@ export const routes: Routes = [
       },
     },
   },
-  { 
-    path: 'categorie/ordinateurs', 
-    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
-    data: { category: 'Ordinateurs portables' } 
+  {
+    path: 'categorie/ordinateurs',
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'),
+    data: { category: 'Ordinateurs portables' }
   },
-  { 
-    path: 'categorie/projecteurs', 
-    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
-    data: { category: 'Projecteurs' } 
+  {
+    path: 'categorie/projecteurs',
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'),
+    data: { category: 'Projecteurs' }
   },
-  { 
-    path: 'categorie/scanner', 
-    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
-    data: { category: 'Scanner' } 
+  {
+    path: 'categorie/scanner',
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'),
+    data: { category: 'Scanner' }
   },
-  { 
-    path: 'categorie/imprimantes', 
-    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
-    data: { category: 'Imprimantes' } 
+  {
+    path: 'categorie/imprimantes',
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'),
+    data: { category: 'Imprimantes' }
   },
-  { 
-    path: 'categorie/stations', 
-    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
-    data: { category: 'Stations de travail fixes' } 
+  {
+    path: 'categorie/stations',
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'),
+    data: { category: 'Stations de travail fixes' }
   },
-  { 
-    path: 'categorie/Serveurs', 
-    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
-    data: { category: 'Serveurs' } 
+  {
+    path: 'categorie/serveurs',
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'),
+    data: { category: 'Serveurs' }
   },
-  { 
-    path: 'categorie/disquedursetusb', 
-    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
-    data: { category: 'disque durs externes, clés USB' } 
+  {
+    path: 'categorie/disquedursetusb',
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'),
+    data: { category: 'disque durs externes, clés USB' }
   },
-  { 
-    path: 'categorie/Câbles et adaptateurs', 
-    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
-    data: { category: 'Câbles et adaptateurs' } 
+  {
+    path: 'categorie/cable-adaptateurs',
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'),
+    data: { category: 'Câbles et adaptateurs' }
   },
-  { 
-    path: 'categorie/Webcams', 
-    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
-    data: { category: 'Webcams' } 
+  {
+    path: 'categorie/webcams',
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'),
+    data: { category: 'Webcams' }
   },
-  { 
-    path: 'categorie/Chargeurs', 
-    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
-    data: { category: 'Chargeurs' } 
+  {
+    path: 'categorie/chargeurs',
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'),
+    data: { category: 'Chargeurs' }
   },
   {
     path: 'reservation/:name',
