@@ -24,10 +24,10 @@ export default class LoginComponent {
       .subscribe((response) => {
         if (response.logged === true) {
           // console.log(response);
-
-          // this.cookieService.set('jwt', response.token);
+          this.cookieService.set('user_id', response.user_id.toString());
+          this.cookieService.set('jwt', response.token);
           // console.log('Login successful: ', response.message);
-          this.route.navigate(['admin/dashboard']);
+          this.route.navigate(['accueil']);
         } else {
           // console.log('Login failed: ', response.message);
         }

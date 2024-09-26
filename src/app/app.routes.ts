@@ -19,29 +19,49 @@ export const routes: Routes = [
     data: { category: 'Ordinateurs portables' } 
   },
   { 
-    path: 'categorie/logiciels', 
+    path: 'categorie/projecteurs', 
     loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
     data: { category: 'Projecteurs' } 
   },
   { 
-    path: 'categorie/reseaux', 
+    path: 'categorie/scanner', 
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
+    data: { category: 'Scanner' } 
+  },
+  { 
+    path: 'categorie/imprimantes', 
     loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
     data: { category: 'Imprimantes' } 
   },
   { 
-    path: 'categorie/outils', 
+    path: 'categorie/stations', 
     loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
-    data: { category: 'Imprimantes' } 
+    data: { category: 'Stations de travail fixes' } 
   },
   { 
-    path: 'categorie/support', 
+    path: 'categorie/Serveurs', 
     loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
-    data: { category: 'Imprimantes' } 
+    data: { category: 'Serveurs' } 
   },
   { 
-    path: 'categorie/maintenance', 
+    path: 'categorie/disquedursetusb', 
     loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
-    data: { category: 'Imprimantes' } 
+    data: { category: 'disque durs externes, clés USB' } 
+  },
+  { 
+    path: 'categorie/Câbles et adaptateurs', 
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
+    data: { category: 'Câbles et adaptateurs' } 
+  },
+  { 
+    path: 'categorie/Webcams', 
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
+    data: { category: 'Webcams' } 
+  },
+  { 
+    path: 'categorie/Chargeurs', 
+    loadComponent: () => import('./views/equipment-category/equipment-category.component'), 
+    data: { category: 'Chargeurs' } 
   },
   {
     path: 'reservation/:name',
