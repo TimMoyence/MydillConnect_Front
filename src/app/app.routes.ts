@@ -46,7 +46,7 @@ export const routes: Routes = [
   {
     path: 'categorie/disquedursetusb',
     loadComponent: () => import('./views/equipment-category/equipment-category.component'),
-    data: { category: 'disque durs externes, clés USB' }
+    data: { category: 'Périphériques de stockage' }
   },
   {
     path: 'categorie/cable-adaptateurs',
@@ -56,12 +56,12 @@ export const routes: Routes = [
   {
     path: 'categorie/webcams',
     loadComponent: () => import('./views/equipment-category/equipment-category.component'),
-    data: { category: 'Webcams' }
+    data: { category: 'Caméras - Webcams' }
   },
   {
     path: 'categorie/chargeurs',
     loadComponent: () => import('./views/equipment-category/equipment-category.component'),
-    data: { category: 'Chargeurs' }
+    data: { category: 'Batteries portables - Chargeurs' }
   },
   {
     path: 'reservation/:name',
