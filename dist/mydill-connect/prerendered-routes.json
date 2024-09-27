@@ -3,16 +3,17 @@
     "/accueil",
     "/admin",
     "/admin/login",
-    "/categorie/Câbles et adaptateurs",
-    "/categorie/Chargeurs",
+    "/categorie/cable-adaptateurs",
+    "/categorie/chargeurs",
     "/categorie/disquedursetusb",
     "/categorie/imprimantes",
     "/categorie/ordinateurs",
     "/categorie/projecteurs",
     "/categorie/scanner",
-    "/categorie/Serveurs",
+    "/categorie/serveurs",
     "/categorie/stations",
-    "/categorie/Webcams",
-    "/mentions-legales"
+    "/categorie/webcams",
+    "/mentions-legales",
+    "/reservations-done"
   ]
 }
