@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiURL: 'http://tmoyence.fr/api/',
+  apiURL: 'https://tmoyence.fr/api/',
 };
